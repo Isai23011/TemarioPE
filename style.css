@@ -6,8 +6,12 @@ h1, h2 {
 
   li{
     font-family: monospace;
+    font-size: 15px;
   }
 
+  h4 {
+    font-size: 18px;
+  }
   
   
  
