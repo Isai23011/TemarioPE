@@ -569,78 +569,66 @@
             <ul>
                 <li>
                     <h4>4.1 Función de probabilidad:</h4>
-                    <p>Una función de probabilidad describe la probabilidad de que una variable aleatoria tome un valor
-                        específico. Para variables discretas, se usa la función de probabilidad de masa, mientras que
-                        para variables continuas, se utiliza la función de densidad de probabilidad. Estas funciones son
-                        esenciales para definir completamente la distribución de una variable aleatoria y permiten
-                        calcular probabilidades y momentos como la media y la varianza.</p>
+                    <p>Una función de probabilidad describe la probabilidad de que una variable aleatoria tome un valor específico. Para variables discretas, se usa la función de probabilidad de masa, mientras que para variables continuas, se utiliza la función de densidad de probabilidad. Estas funciones son esenciales para definir completamente la distribución de una variable aleatoria y permiten calcular probabilidades y momentos como la media y la varianza.</p>
                 </li>
                 <li>
                     <h4>4.2 Distribución binomial:</h4>
-                    <p>La distribución binomial modela el número de éxitos en una secuencia de n ensayos independientes,
-                        cada uno con una probabilidad de éxito p. Es útil en situaciones donde hay un número fijo de
-                        ensayos y dos posibles resultados (éxito o fracaso) en cada ensayo. La función de probabilidad
-                        es \(P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\), donde \(\binom{n}{k}\) es el coeficiente
-                        binomial. La media y la varianza de la distribución binomial son \(E(X) = np\) y \(Var(X) =
-                        np(1-p)\), respectivamente.</p>
+                    <p>La distribución binomial modela el número de éxitos en una secuencia de n ensayos independientes, cada uno con una probabilidad de éxito p. Es útil en situaciones donde hay un número fijo de ensayos y dos posibles resultados (éxito o fracaso) en cada ensayo. La función de probabilidad es \(P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\), donde \(\binom{n}{k}\) es el coeficiente binomial. La media y la varianza de la distribución binomial son \(E(X) = np\) y \(Var(X) = np(1-p)\), respectivamente.</p>
+                    <ul>
+                        <li><strong>Función de probabilidad:</strong> \(P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\)</li>
+                        <li><strong>Media:</strong> \(E(X) = np\)</li>
+                        <li><strong>Varianza:</strong> \(Var(X) = np(1-p)\)</li>
+                        <li><strong>¿Cuándo usar?</strong> Cuando se tienen un número fijo de ensayos con dos resultados posibles y se quiere modelar el número de éxitos.</li>
+                        <li><strong>Python:</strong> Utilizar la función `binom.pmf` de SciPy para calcular probabilidades.</li>
+                    </ul>
                 </li>
                 <li>
                     <h4>4.3 Distribución hipergeométrica:</h4>
-                    <p>La distribución hipergeométrica describe la probabilidad de k éxitos en n extracciones sin
-                        reemplazo de una población de tamaño N que contiene exactamente K éxitos. Es útil en situaciones
-                        donde la muestra se toma sin reemplazo, lo que significa que cada elemento seleccionado afecta
-                        la probabilidad de selección de los siguientes. La función de probabilidad es \(P(X = k) =
-                        \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}\). La media y la varianza de la distribución
-                        hipergeométrica son \(E(X) = n\frac{K}{N}\) y \(Var(X) =
-                        n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}\), respectivamente.</p>
+                    <p>La distribución hipergeométrica describe la probabilidad de k éxitos en n extracciones sin reemplazo de una población de tamaño N que contiene exactamente K éxitos. Es útil en situaciones donde la muestra se toma sin reemplazo, lo que significa que cada elemento seleccionado afecta la probabilidad de selección de los siguientes. La función de probabilidad es \(P(X = k) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}\). La media y la varianza de la distribución hipergeométrica son \(E(X) = n\frac{K}{N}\) y \(Var(X) = n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}\), respectivamente.</p>
+                    <ul>
+                        <li><strong>Función de probabilidad:</strong> \(P(X = k) = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}\)</li>
+                        <li><strong>Media:</strong> \(E(X) = n\frac{K}{N}\)</li>
+                        <li><strong>Varianza:</strong> \(Var(X) = n\frac{K}{N}\frac{N-K}{N}\frac{N-n}{N-1}\)</li>
+                        <li><strong>¿Cuándo usar?</strong> Cuando se realizan extracciones sin reemplazo de una población finita.</li>
+                        <li><strong>Python:</strong> Utilizar la función `hypergeom.pmf` de SciPy para calcular probabilidades.</li>
+                    </ul>
                 </li>
                 <li>
                     <h4>4.4 Distribución de Poisson:</h4>
-                    <p>La distribución de Poisson modela el número de eventos que ocurren en un intervalo de tiempo fijo
-                        o en una región espacial fija, dada una tasa promedio de ocurrencia λ. Es útil para modelar
-                        eventos raros en grandes poblaciones o intervalos de tiempo. La función de probabilidad es \(P(X
-                        = k) = \frac{e^{-\lambda} \lambda^k}{k!}\). La media y la varianza de la distribución de Poisson
-                        son ambas iguales a λ. Esta distribución se usa comúnmente en análisis de conteos, como el
-                        número de llamadas a un centro de atención al cliente en una hora.</p>
+                    <p>La distribución de Poisson modela el número de eventos que ocurren en un intervalo de tiempo fijo o en una región espacial fija, dada una tasa promedio de ocurrencia λ. Es útil para modelar eventos raros en grandes poblaciones o intervalos de tiempo. La función de probabilidad es \(P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}\). La media y la varianza de la distribución de Poisson son ambas iguales a λ. Esta distribución se usa comúnmente en análisis de conteos, como el número de llamadas a un centro de atención al cliente en una hora.</p>
+                    <ul>
+                        <li><strong>Función de probabilidad:</strong> \(P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}\)</li>
+                        <li><strong>Media:</strong> \(E(X) = \lambda\)</li>
+                        <li><strong>Varianza:</strong> \(Var(X) = \lambda\)</li>
+                        <li><strong>¿Cuándo usar?</strong> Para modelar la ocurrencia de eventos raros en un intervalo de tiempo o espacio.</li>
+                        <li><strong>Python:</strong> Utilizar la función `poisson.pmf` de SciPy para calcular probabilidades.</li>
+                    </ul>
                 </li>
                 <li>
                     <h4>4.5 Distribución normal:</h4>
-                    <p>La distribución normal es una distribución continua que se caracteriza por su media μ y
-                        desviación estándar σ. Su función de densidad de probabilidad es \(f(x) =
-                        \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\). La distribución normal es
-                        simétrica alrededor de su media, y sus propiedades hacen que sea extremadamente útil en
-                        estadística, especialmente debido al teorema central del límite, que establece que la suma de un
-                        gran número de variables aleatorias independientes y identicamente distribuidas tiende a una
-                        distribución normal, independientemente de la distribución original de las variables.</p>
+                    <p>La distribución normal es una distribución continua que se caracteriza por su media μ y desviación estándar σ. Su función de densidad de probabilidad es \(f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\). La distribución normal es simétrica alrededor de su media, y sus propiedades hacen que sea extremadamente útil en estadística, especialmente debido al teorema central del límite, que establece que la suma de un gran número de variables aleatorias independientes y identicamente distribuidas tiende a una distribución normal, independientemente de la distribución original de las variables.</p>
+                    <ul>
+                        <li><strong>Función de probabilidad:</strong> \(f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\)</li>
+                        <li><strong>Media:</strong> \(E(X) = \mu\)</li>
+                        <li><strong>Varianza:</strong> \(Var(X) = \sigma^2\)</li>
+                        <li><strong>¿Cuándo usar?</strong> Cuando se asume que los datos siguen una distribución simétrica y el Teorema Central del Límite se puede aplicar.</li>
+                        <li><strong>Python:</strong> Utilizar la función `norm.pdf` de SciPy para calcular la densidad de probabilidad.</li>
+                    </ul>
                 </li>
                 <li>
-                    <h4>4.6 Distribución T-student:</h4>
-                    <p>La distribución T de Student se utiliza para estimar la media de una población normalmente
-                        distribuida cuando el tamaño de la muestra es pequeño y la desviación estándar de la población
-                        es desconocida. La distribución T tiene colas más largas que la distribución normal, lo que
-                        refleja una mayor incertidumbre en las estimaciones.
+                    <h4>4.6 Distribución T de Student:</h4>
+                    <p>La distribución T de Student se utiliza para estimar la media de una población normalmente distribuida cuando el tamaño de la muestra es pequeño y la desviación estándar de la población es desconocida. La distribución T tiene colas más largas que la distribución normal, lo que refleja una mayor incertidumbre en las estimaciones.</p>
+                    <ul>
+                        <li><strong>Función de probabilidad:</strong> Depende de los grados de libertad y se usa la función T de Student.</li>
+                        <li><strong>Media:</strong> 0 (para la distribución estándar T de Student)</li>
+                        <li><strong>Varianza:</strong> \(\frac{\nu}{\nu - 2}\) para \(\nu > 2\)</li>
+                        <li><strong>¿Cuándo usar?</strong> Cuando se estima la media de una población normalmente distribuida con un tamaño de muestra pequeño.</li>
+                        <li><strong>Python:</strong> Utilizar la función `t.pdf` de SciPy para calcular la densidad de probabilidad.</li>
+                    </ul>
                 </li>
                 <li>
                     <h4>4.7 Distribución Chi cuadrada:</h4>
-                    <p>La distribución Chi cuadrada es una distribución continua que surge con frecuencia en pruebas de
-                        hipótesis y análisis de varianza. Se utiliza para evaluar la varianza en una población
-                        normalmente distribuida y en la prueba de independencia en tablas de contingencia. La
-                        distribución Chi cuadrada se caracteriza por un parámetro de grados de libertad. Su función de
-                        densidad de probabilidad es \(f(x) = \frac{1}{2^{k/2} \Gamma(k/2)} x^{(k/2)-1} e^{-x/2}\), donde
-                        k son los grados de libertad y \(\Gamma\) es la función gamma. La media y la varianza de la
-                        distribución Chi cuadrada son \(E(X) = k\) y \(Var(X) = 2k\), respectivamente.</p>
-                </li>
-                <li>
-                    <h4>4.8 Distribución F:</h4>
-                    <p>La distribución F es una distribución continua que se utiliza principalmente en el análisis de
-                        varianza (ANOVA) y en pruebas de hipótesis sobre la igualdad de dos varianzas. Se caracteriza
-                        por dos parámetros de grados de libertad, uno para el numerador y otro para el denominador. Su
-                        función de densidad de probabilidad es más compleja y se define en términos de la función beta.
-                        La distribución F permite comparar las varianzas de dos muestras, siendo fundamental en la
-                        prueba F, que se utiliza para determinar si hay diferencias significativas entre las varianzas
-                        de dos poblaciones.</p>
-                </li>
-            </ul>
+                    <p>La distribución Chi cuadrada es una distribución continua que surge con frecuencia en pruebas de hipótesis y análisis de varianza. Se utiliza para evaluar la varianza en una población normalmente distribuida y en la prueba de independencia en tablas de contingencia. La distribución Chi cuadrada se caracteriza por un parámetro de grados de libertad. Su función de densidad de probabilidad es \(f(x) = \frac{1}{2^{k/2} \Gamma(k/2)} x^{(k/2)-1} e^{-x
 
 </body>
 
