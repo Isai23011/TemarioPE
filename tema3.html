@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tema 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, monospace;
+        }
+        .formula {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .output {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sólo para practicar. Los números telefónicos en la ciudad de Cuernavaca, Morelos, constan de siete dígitos.</h1>
+    <h2>a) ¿Cuántas líneas telefónicas pueden crearse en esa ciudad? Recuerda que no pueden comenzar con cero.</h2>
+    <h3>Número Total de Combinaciones de Números Telefónicos</h3>
+    <div class="formula">
+        \[Combinaciones = n × 10^{r-1}\]
+        \[donde n = 9 (primer digito)\]
+        \[r = 7 (total digitos)\]
+        \[combinaciones = 9 × 10^6\]
+        \[combinaciones = 9 × 1000000\]
+        \[ombinaciones = 9000000\]
+    </div>
+    <p>Por lo tanto el numero de lineas telefonicas que se pueden crear es de 9000000</p>
+   
+        <h1>Ejemplo de código Python</h1>
+        <pre><code class="python">
+            Opcion_inicial = 9
+            Digitos_opciones = 10
+            TotalLineasTel = Opcion_inicial * (Digitos_opciones ** 6)
+            print(TotalLineasTel)
+        </code></pre>
+        <p>La ejecución de este código Python muestra el siguiente resultado:</p>
+        <div class="output">9000000</div>
+    
+    <h2>b) Si los tres primeros dígitos representan una zona de Cuernavaca, ¿cuántas líneas telefónicas pertenecen a la zona 326?</h2>
+    <h3>El 10 representa los valores psibles por cada digito entonces este valor se eleva a la potencia de 7 que es el numero de digitos disponibles</h3>
+    <div class="formula">
+        \[Combinaciones = n × 10^{r-1}\]
+        \[donde n = 10 (digitos del 0 al 9)\]
+        \[r = 7 (total digitos)\]
+        \[combinaciones = 10 × 10^{7-1}\]
+        \[combinaciones = 10 × 10^6\]
+        \[combinaciones = 10000000\]
+    </div>
+    <p>Por lo tanto las lineas telefonicas que pertenecen a la zona 326 son 10000000</p>
+    
+        <h1>Ejemplo de código Python</h1>
+        <pre><code class="python">
+            Ultimos_cuatro_digitos = 10 ** 7
+            liNZona_326 = Ultimos_cuatro_digitos
+            print(liNZona_326)
+        </code></pre>
+        <p>La ejecución de este código Python muestra el siguiente resultado:</p>
+        <div class="output">10000000</div>
+    
+</body>
+</html>
